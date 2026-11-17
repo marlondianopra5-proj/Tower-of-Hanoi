@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Tower of Hanoi</h1>
+      <p class="rules">Move the whole stack to the right peg. Only the top disc moves, and a disc never sits on a smaller one.</p>
+    </header>
+
+    <section class="stats" aria-live="polite">
+      <div><span id="moves">0</span> moves</div>
+      <div>best possible: <span id="optimal">7</span></div>
+      <div>time <span id="timer">0:00</span></div>
+      <div>your best: <span id="best">–</span></div>
+    </section>
+
+    <section class="board" id="board" aria-label="Game board">
+      <button class="tower" data-peg="0" aria-label="Left peg (key 1)"><span class="rod"></span><span class="discs"></span><span class="key">1</span></button>
+      <button class="tower" data-peg="1" aria-label="Middle peg (key 2)"><span class="rod"></span><span class="discs"></span><span class="key">2</span></button>
+      <button class="tower" data-peg="2" aria-label="Right peg (key 3)"><span class="rod"></span><span class="discs"></span><span class="key">3</span></button>
+    </section>
+
+    <p id="message" class="message" role="status">Pick a peg to lift its top disc.</p>
+
+    <section class="controls">
+      <label>Discs
+        <select id="diskCount">
+          <option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option>
+        </select>
+      </label>
+      <button id="undo">Undo</button>
+      <button id="reset">Restart</button>
+      <button id="solve">Show solution</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
